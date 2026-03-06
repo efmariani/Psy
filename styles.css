@@ -208,6 +208,14 @@ strong {
     letter-spacing: 2px;
     color: var(--primary-color);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    margin-right: 15px;
 }
 
 .nav-links {
@@ -349,6 +357,13 @@ strong {
     height: auto;
     display: block;
     border-radius: var(--radius);
+}
+
+.profile-img {
+    border: 10px solid var(--white);
+    outline: 1px solid rgba(0, 0, 0, 0.05);
+    /* To define the edge against white backgrounds */
+    box-shadow: var(--shadow);
 }
 
 .shadow-elegant {
