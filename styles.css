@@ -94,8 +94,35 @@ body {
     background-color: var(--bg-color);
 }
 
-.mb-4 {
-    margin-bottom: 3rem;
+.motivos-lista {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 4rem auto 0;
+}
+
+.motivos-lista li {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 1.1rem;
+    color: #444;
+    transition: transform 0.3s ease;
+}
+
+.motivos-lista li:last-child {
+    border-bottom: none;
+}
+
+.motivos-lista li strong {
+    color: var(--primary-color);
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    font-family: var(--font-serif);
+}
+
+.motivos-lista li:hover {
+    transform: translateX(10px);
 }
 
 .mt-2 {
