@@ -251,6 +251,41 @@ strong {
     align-items: center;
 }
 
+/* Nav Toggle (Hamburger) */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.nav-toggle span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+/* Scroll context adjustments */
+.navbar.scrolled .nav-toggle span {
+    background-color: var(--primary-color);
+}
+
+.hero .nav-toggle span {
+    background-color: #fff;
+    /* White on hero for contrast */
+}
+
+.navbar.scrolled .nav-toggle span {
+    background-color: var(--primary-color);
+}
+
 .nav-links a {
     text-decoration: none;
     color: var(--primary-color);
@@ -571,8 +606,65 @@ details[open] summary::after {
         padding: 4rem 0;
     }
 
-    .navbar .nav-links {
-        display: none;
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #f9f9f9;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: all 0.4s ease;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+        display: flex !important;
+        /* Overriding common hide/show logic */
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* Simple overlay darken */
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Hamburger animation to X */
+    .nav-toggle.active span:nth-child(1) {
+        transform: translateY(9.5px) rotate(45deg);
+        background-color: var(--primary-color) !important;
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: translateY(-9.5px) rotate(-45deg);
+        background-color: var(--primary-color) !important;
     }
 
     /* Simplified for demo, would normally use hamburger */
