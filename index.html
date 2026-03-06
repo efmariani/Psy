@@ -15,6 +15,9 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/Imagenes/logopsy.png">
 
@@ -26,10 +29,10 @@
 
     <header class="navbar">
         <div class="container flex-row justify-between align-center">
-            <div class="logo">
+            <a href="#" class="logo">
                 <img src="assets/Imagenes/logopsy.png" alt="Psymple Logo" class="logo-img">
                 <span>Psymple</span>
-            </div>
+            </a>
             <nav>
                 <ul class="nav-links flex-row">
                     <li><a href="#sobre-mi">Sobre Mí</a></li>
@@ -184,25 +187,37 @@
     </main>
 
     <footer id="contacto" class="footer">
-        <div class="container grid-3 container-footer">
+        <div class="container grid-footer">
             <div class="footer-brand">
-                <div class="logo">
+                <a href="#" class="logo">
                     <img src="assets/Imagenes/logopsy.png" alt="Psymple Logo" class="logo-img">
                     <span>Psymple</span>
+                </a>
+                <p>Psicología en Córdoba | Un espacio de escucha para jóvenes y adultos orientado por el psicoanálisis.
+                </p>
+                <p class="lic-footer">Lic. Silvina Jimenez • MPº 8232</p>
+            </div>
+
+            <div class="footer-hablemos">
+                <h4>Hablemos</h4>
+                <div class="footer-cta-group">
+                    <a href="https://api.whatsapp.com/send/?phone=5493516966222&text=Hola%2C+vi+tu+web+Psymple+y+quisiera+consultar+por+una+entrevista&type=phone_number&app_absent=0"
+                        target="_blank" class="btn btn-whatsapp-footer">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="https://www.doctoraliar.com/silvina-jimenez/psicoanalista-psicologo/cordoba-capital?saasonly=true"
+                        target="_blank" class="btn btn-outline-footer">
+                        Ver turnos disponibles
+                    </a>
                 </div>
-                <p>Un espacio de escucha para jóvenes y adultos orientado por el psicoanálisis.</p>
+                <div class="footer-info-details mt-1">
+                    <p><i class="fas fa-map-marker-alt"></i> Córdoba, Argentina</p>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
             </div>
-            <div class="footer-contact">
-                <h4>Contacto</h4>
-                <p>Lic. Silvina Jimenez</p>
-                <p>MPº 8232</p>
-                <p>Córdoba, Argentina</p>
-            </div>
-            <div class="footer-social">
-                <h4>Redes</h4>
-                <a href="#" class="social-link">Instagram</a>
-                <p class="mt-1">© 2026 Psymple</p>
-            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2026 Psymple • Todos los derechos reservados.</p>
         </div>
     </footer>
 
