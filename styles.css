@@ -512,6 +512,37 @@ details[open] summary::after {
     transform: translateY(-3px);
 }
 
+.btn-instagram-footer {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white !important;
+    text-align: center;
+    border-radius: 4px;
+    padding: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.btn-instagram-footer:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+
+.footer-instagram-cta {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 2rem;
+}
+
+.footer-instagram-cta p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .btn-outline-footer {
     border: 1px solid var(--accent-color);
     color: var(--accent-color) !important;
